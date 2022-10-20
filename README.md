@@ -153,13 +153,6 @@ console.custom({
 });
 ```
 
-## Loggeo de excepciones de **AWS**
-El logger esta adaptado para detectar cuando se está haciendo un log de una excepción de AWS, en dicho caso agrega una etiqueta para poder visualizar rápidamente este tipo de excepción.
-
-```
-<timestamp> <nivel de log> [ <nombre del archivo> <linea> ]: EXCEPCION AWS <objeto>
-```
-
 ## Dependencias
 Este logger funciona utilizando como dependencia la libreria Winston
 [link](https://www.npmjs.com/package/winston)

@@ -1,0 +1,34 @@
+# test
+tests/
+coverage
+.nyc_output
+
+# build tools
+Jenkinsfile
+
+# linters
+.eslintrc*
+
+# editor settings
+.idea/
+.editorconfig
+
+# OS
+.DS_Store
+*.md5
+
+# git
+.git/
+.gitignore
+
+# dev file config
+.env
+example.env
+.npmrc
+example.npmrc
+
+# prettier configuration file
+.prettierrc
+
+# lintstage configuration file
+. lintstagedrc

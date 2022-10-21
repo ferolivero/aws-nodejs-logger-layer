@@ -1,39 +1,37 @@
 {
-    "name": "arch-logger",
-    "version": "2.0.9-SNAPSHOT.0",
+    "name": "aws-nodejs-logger",
+    "version": "1.0.0",
     "description": "Layer logger",
     "main": "index.js",
     "scripts": {
         "lint": "./node_modules/.bin/eslint **/*.js --rulesdir=\"./node_modules/eslint/lib/rules\" --color;exit 0",
         "lint:fix": "./node_modules/.bin/eslint **/*.js --rulesdir=\"./node_modules/eslint/lib/rules\" --fix --color;exit 0",
-        "test": "NODE_ENV=test DOTENV_CONFIG_PATH=./.env.test nyc --exclude=tests --exclude=exception --reporter=lcov --reporter=text ./node_modules/mocha/bin/mocha tests/**/*spec.js --require dotenv/config --reporter spec",
+        "test": "NODE_ENV=test DOTENV_CONFIG_PATH=./.env.test nyc --exclude=tests --exclude=exception --reporter=lcov --reporter=text mocha tests/**/*spec.js --require dotenv/config --reporter spec",
         "coverage": "./node_modules/.bin/nyc report --statements 80 --functions 80 --lines 80 --branches 80 --check-coverage --reporter=text-summary --per-file;exit 0",
         "prerelease_lib": "npm version prerelease --preid=SNAPSHOT",
         "release_lib": "npm version patch",
         "prettier": "./node_modules/.bin/prettier **/*.js --write",
         "precommit": "./node_modules/.bin/prettier/lint-staged"
     },
-    "author": "ARQUITECTURA APLICATIVA",
+    "author": "Fernando Olivero",
     "dependencies": {
-        "arch-exception": "^1.0.2",
-        "arch-utils": "^1.0.1",
-        "winston": "^3.2.1"
+        "winston": "^3.8.2"
     },
     "devDependencies": {
-        "aws-sdk": "^2.674.0",
-        "chai": "^4.2.0",
-        "dotenv": "^8.1.0",
-        "eslint": "^6.3.0",
-        "eslint-config-prettier": "^6.10.1",
-        "eslint-plugin-prettier": "^3.1.2",
-        "lint-staged": "^10.1.1",
+        "aws-sdk": "^2.1237.0",
+        "chai": "^4.3.6",
+        "dotenv": "^16.0.3",
+        "eslint": "^8.25.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "lint-staged": "^13.0.3",
         "lodash.isobject": "^3.0.2",
-        "mocha": "^6.2.0",
-        "nyc": "^14.1.1",
-        "prettier": "^2.0.2",
-        "prettier-eslint": "^9.0.1",
-        "sinon": "^7.4.2",
-        "winston-transport": "^4.3.0"
+        "mocha": "^10.1.0",
+        "nyc": "^15.1.0",
+        "prettier": "^2.7.1",
+        "prettier-eslint": "^15.0.1",
+        "sinon": "^14.0.1",
+        "winston-transport": "^4.5.0"
     },
     "license": "ISC"
 }
